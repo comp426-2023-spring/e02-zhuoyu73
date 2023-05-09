@@ -23,9 +23,8 @@ function play() {
 }
 
 async function rps_without_opponent(){
-    const baseurl = window.location.href
     try {
-        const url = baseurl + "/app/rps";
+        const url = "/app/rps";
         const response = await fetch(url);
         const data = await response.json();
         return data;
@@ -35,9 +34,8 @@ async function rps_without_opponent(){
 }
 
 async function rpsls_without_opponent(){
-    const baseurl = window.location.href
     try {
-        const url = baseurl + "/app/rpsls";
+        const url = "/app/rpsls";
         const response = await fetch(url);
         const data = await response.json();
         return data;
@@ -70,9 +68,8 @@ async function rpsls(shot) {
 }
 
 async function rps_with_opponent(shot) {
-    const baseurl = window.location.href
     try {
-        const url = baseurl + "/app/rps/play/" + shot;
+        const url = "/app/rps/play/" + shot;
         const response = await fetch(url);
         const data = await response.json();
         return data;
@@ -82,9 +79,8 @@ async function rps_with_opponent(shot) {
 }
 
 async function rpsls_with_opponent(shot) {
-    const baseurl = window.location.href
     try {
-        const url = baseurl + "/app/rpsls/play/" + shot;
+        const url = "/app/rpsls/play/" + shot;
         const response = await fetch(url);
         const data = await response.json();
         return data;
