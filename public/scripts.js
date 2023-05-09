@@ -46,10 +46,10 @@ async function rpsls_without_opponent(){
 
 async function rps(shot) {
 	try {
-		document.getElementById("player-shot").value = shot;
+		document.getElementById("rps_user_choice").value = shot;
 		const {result, opponent} = await rps_with_opponent(shot);
-		document.getElementById("result").value = result;
-		document.getElementById("opponent-shot").value = opponent;
+		document.getElementById("rps_result").value = result;
+		document.getElementById("rps_opponent_choice").value = opponent;
 	} catch (error){
 		console.error(error);
 	}
@@ -57,10 +57,10 @@ async function rps(shot) {
 
 async function rpsls(shot) {
 	try {
-		document.getElementById("rpsls-player-shot").value = shot;
+		document.getElementById("rpsls_user_choice").value = shot;
 		const {result, opponent} = await rpsls_with_opponent(shot);
-		document.getElementById("rpsls-result").value = result;
-		document.getElementById("rpsls-opponent-shot").value = opponent;
+		document.getElementById("rpsls_result").value = result;
+		document.getElementById("rpsls_opponent_choice").value = opponent;
 	} catch (error){
 		console.error(error);
 	}
