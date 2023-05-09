@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>RPS and RPSLS</title>
@@ -11,19 +12,25 @@
             <h1>Rock Paper Scissors and Rock Paper Scissors Lizard Spock</h1>
         </header>
         <form id="userinput" action="/submit">
-            <input type="checkbox" name="rps" id="rps">
-            <label class="home">Play Rock, Paper, Scissors?</label>
-            <br><br>
-            <input type="checkbox" name="rpsls" id="rpsls">
-            <label class="home">Play Rock, Paper, Scissors, Lizard, Spock?</label>
-            <br><br>
-            <input type="checkbox" name="opponent" id="opponent">
-            <label class="home">Play against an opponent?</label>
-            <br><br>
-            <button type="submit" class="invisible">invisible</button>
+            <label>
+            <input type="checkbox" name="game" value="rps">
+            Play Rock, Paper, Scissors?
+            </label>
+            <br>
+            <label>
+            <input type="checkbox" name="game" value="rpsls">
+            Play Rock, Paper, Scissors, Lizard, Spock?
+            </label>
+            <br>
+            <label>
+            <input type="checkbox" name="opponent">
+            Play against an opponent?
+            </label>
+            <br>
+            <button type="submit" style="display:none"></button>
         </form>
-        <button type="button" class="function" id="play" onclick="play()">Play</button>
-        <button type="button" class="function" id="rules" onclick="viewRules()">View rules</button>
+        <button type="button" onclick="play()">Play</button>
+        <button type="button" onclick="viewRules()">View Rules</button>
         <br><br>
         <form>
             <input type="text" class="invisible" id="no_opponent" readonly>
