@@ -3,28 +3,29 @@
 // https://github.com/jdmar3/coinserver
 
 function play() {
-  const rps = document.getElementById('rps');
-  const rpsls = document.getElementById('rpsls');
-  const opponent = document.getElementById('opponent');
+  const rps = document.getElementById("rps");
+  const rpsls = document.getElementById("rpsls");
+  const opponent = document.getElementById("opponent");
 
   if (!opponent.checked && rps.checked){
-  	rps_without_opponent().then(shot => {
+    rps_without_opponent().then(shot => {
             document.getElementById("no_opponent").value = shot.player;
         })
   } else if (!opponent.checked && rpsls.checked){
-  	rpsls_without_opponent().then(shot => {
+    rpsls_without_opponent().then(shot => {
             document.getElementById("no_opponent").value = shot.player;
         })
   } else if (opponent.checked && rps.checked){
-  	window.location.href = 'rps.html';
+    window.location.href = "rps.html";
   } else if (opponent.checked && rpsls.checked){
-  	window.location.href = 'rpsls.html';
+    window.location.href = "rpsls.html";
   }
 }
 
 async function rps_without_opponent(){
-	try {
-		const url = "/app/rps";
+    const baseurl = window.location.href
+    try {
+        const url = baseurl + "/app/rps";
         const response = await fetch(url);
         const data = await response.json();
         return data;
@@ -34,8 +35,9 @@ async function rps_without_opponent(){
 }
 
 async function rpsls_without_opponent(){
-	try {
-		const url = "/app/rpsls";
+    const baseurl = window.location.href
+    try {
+        const url = baseurl + "/app/rpsls";
         const response = await fetch(url);
         const data = await response.json();
         return data;
@@ -45,31 +47,32 @@ async function rpsls_without_opponent(){
 }
 
 async function rps(shot) {
-	try {
-		document.getElementById("rps_user_choice").value = shot;
-		const {result, opponent} = await rps_with_opponent(shot);
-		document.getElementById("rps_result").value = result;
-		document.getElementById("rps_opponent_choice").value = opponent;
-	} catch (error){
-		console.error(error);
-	}
+    try {
+        document.getElementById("rps_user_choice").value = shot;
+        const {result, opponent} = await rps_with_opponent(shot);
+        document.getElementById("rps_result").value = result;
+        document.getElementById("rps_opponent_choice").value = opponent;
+    } catch (error){
+        console.error(error);
+    }
 }
 
 async function rpsls(shot) {
-	try {
-		document.getElementById("rpsls_user_choice").value = shot;
-		const {result, opponent} = await rpsls_with_opponent(shot);
-		document.getElementById("rpsls_result").value = result;
-		document.getElementById("rpsls_opponent_choice").value = opponent;
-	} catch (error){
-		console.error(error);
-	}
-	
+    try {
+        document.getElementById("rpsls_user_choice").value = shot;
+        const {result, opponent} = await rpsls_with_opponent(shot);
+        document.getElementById("rpsls_result").value = result;
+        document.getElementById("rpsls_opponent_choice").value = opponent;
+    } catch (error){
+        console.error(error);
+    }
+    
 }
 
 async function rps_with_opponent(shot) {
+    const baseurl = window.location.href
     try {
-        const url = "/app/rps/play/" + shot;
+        const url = baseurl + "/app/rps/play/" + shot;
         const response = await fetch(url);
         const data = await response.json();
         return data;
@@ -79,8 +82,9 @@ async function rps_with_opponent(shot) {
 }
 
 async function rpsls_with_opponent(shot) {
+    const baseurl = window.location.href
     try {
-        const url = "/app/rpsls/play/" + shot;
+        const url = baseurl + "/app/rpsls/play/" + shot;
         const response = await fetch(url);
         const data = await response.json();
         return data;

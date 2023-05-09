@@ -1,8 +1,56 @@
-body {
+header{
+    text-align: left;
+    background-color: azure;
 }
 
-h1 {
+form{
+    text-align: left;
 }
 
-p {
+.home{
+    font-size: x-large;
+    border-color: blueviolet;
+    line-height: 50px;
+}
+
+.game{
+    display: inline-block;
+    width: 120px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: left;
+    margin-right: 20px;
+}
+
+input[type=text]{
+    display: inline-block;
+    font-size:30px;
+    text-align: left;
+}
+
+.invisible{
+    display: none;
+}
+
+body{
+    font-size: medium;
+    text-align: left;
+}
+
+p{
+    font-size: large;
+    line-height: 50px;
+    text-align: center;
+}
+
+.function{
+    font-size: large;
+    border-color: blueviolet;
+    text-align: center;
+}
+
+.shot{
+    font-size:large;
+    border-color: blueviolet;
+    text-align: center;
 }
