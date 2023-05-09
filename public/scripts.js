@@ -9,11 +9,11 @@ function play() {
 
   if (!opponent.checked && rps.checked){
   	rps_without_opponent().then(shot => {
-            document.getElementById("no-opponent").value = shot.player;
+            document.getElementById("no_opponent").value = shot.player;
         })
   } else if (!opponent.checked && rpsls.checked){
   	rpsls_without_opponent().then(shot => {
-            document.getElementById("no-opponent").value = shot.player;
+            document.getElementById("no_opponent").value = shot.player;
         })
   } else if (opponent.checked && rps.checked){
   	window.location.href = 'rps.html';

@@ -1,12 +1,35 @@
-<html>
+<html lang="en">
     <head>
-        <title>Rock</title>
+        <meta charset="UTF-8">
+        <title>RPS and RPSLS</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="scripts.js"></script>
         <!-- Link to your script file(s) and CSS in here somewhere -->
     </head>
     <body>
-
-    <!-- Your interface markup goes here -->
-    <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
-
+        <header>
+            <h1>Rock Paper Scissors & Rock Paper Scissors Lizard Spock</h1>
+        </header>
+        <form id="userinput" action="/submit">
+            <input type="checkbox" name="rps" id="rps">
+            <label class="home">Play Rock, Paper, Scissors?</label>
+            <br><br>
+            <input type="checkbox" name="rpsls" id="rpsls">
+            <label class="home">Play Rock, Paper, Scissors, Lizard, Spock?</label>
+            <br><br>
+            <input type="checkbox" name="opponent" id="opponent">
+            <label class="home">Play against an opponent?</label>
+            <br><br>
+            <button type="submit" class="invisible">invisible</button>
+        </form>
+        <button type="button" class="function" id="play" onclick="play()">Play</button>
+        <button type="button" class="function" id="rules" onclick="viewRules()">View rules</button>
+        <br><br>
+        <h2>No Opponent Game</h2>
+        <form>
+            <input type="text" class="display" id="no_opponent" readonly>
+            <br>
+            <button type="submit" class="invisible">invisible</button>
+        </form>
     </body>
 </html>
