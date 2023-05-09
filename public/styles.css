@@ -1,15 +1,18 @@
 header{
+    font-family: Arial, sans-serif;
     text-align: left;
     background-color: azure;
 }
 
 form{
+    font-family: Arial, sans-serif;
     text-align: left;
 }
 
 
 
 .home{
+    font-family: Arial, sans-serif;
     font-size: x-large;
     border-color: blueviolet;
     line-height: 50px;
@@ -20,6 +23,7 @@ form{
 .game{
     display: inline-block;
     font-size: 30px;
+    font-family: Arial, sans-serif;
     line-height: 50px;
     margin-right: 20px;
     text-align: left;
@@ -29,6 +33,7 @@ form{
 input[type="text"]{
     display: inline-block;
     font-size:30px;
+    font-family: Arial, sans-serif;
     text-align: left;
 }
 
@@ -37,11 +42,13 @@ input[type="text"]{
 }
 
 body{
+    font-family: Arial, sans-serif;
     font-size: medium;
     text-align: left;
 }
 
 p{
+    font-family: Arial, sans-serif;
     font-size: large;
     line-height: 50px;
     text-align: center;
@@ -50,11 +57,13 @@ p{
 .function{
     border-color: blueviolet;
     font-size: large;
+    font-family: Arial, sans-serif;
     text-align: center;
 }
 
 .shot{
     border-color: blueviolet;
     font-size:large;
+    font-family: Arial, sans-serif;
     text-align: center;
 }
